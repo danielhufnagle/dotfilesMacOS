@@ -1,0 +1,39 @@
+#    _____ _    _         _            #
+#   / ____| |  | |       | |           #
+#  | (___ | | _| |__   __| |_ __ ___   #
+#   \___ \| |/ / '_ \ / _` | '__/ __|  #
+#   ____) |   <| | | | (_| | | | (__   #
+#  |_____/|_|\_\_| |_|\__,_|_|  \___|  #
+
+# ----- MOVE WINDOWS ----- #
+ctrl + alt - up : yabai -m window --swap north
+ctrl + alt - down : yabai -m window --swap south
+ctrl + alt - right : yabai -m window --swap east
+ctrl + alt - left : yabai -m window --swap west
+
+# ----- MOVE WINDOWS ACROSS DISPLAYS ----- #
+ctrl + alt + shift - right : yabai -m window --display east
+ctrl + alt + shift - left : yabai -m window --display west
+
+# ----- MOVE WINDOWS ACROSS SPACES ----- #
+ctrl + alt - l : yabai -m window --space next
+ctrl + alt - j : yabai -m window --space prev
+ctrl + alt - 1 : yabai -m window --space 1
+ctrl + alt - 2 : yabai -m window --space 2
+ctrl + alt - 3 : yabai -m window --space 3
+ctrl + alt - 4 : yabai -m window --space 4
+ctrl + alt - 5 : yabai -m window --space 5
+
+# ----- CHANGE LAYOUT ----- #
+ctrl + alt - f : yabai -m config layout stack
+ctrl + alt + shift - f : yabai -m config layout bsp
+
+# ----- CHANGE MOUSE-FOCUS BEHAVIOR ----- #
+ctrl + alt - m : yabai -m config focus_follows_mouse off
+ctrl + alt + shift - m : yabai -m config focus_follows_mouse autoraise
+
+# ----- FLOATING ----- #
+ctrl + alt - t : yabai -m window --toggle float
+
+# ----- OPEN ITERM ----- #
+ctrl + alt - return : open -na iTerm

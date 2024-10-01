@@ -1,0 +1,62 @@
+# configure shortcuts for yabai
+
+# changing focus within a space
+#alt - j : yabai -m window --focus south
+#alt - k : yabai -m window --focus north
+#alt - h : yabai -m window --focus west
+#alt - l : yabai -m window --focus east
+
+# changing focus between displays
+#alt - s: yabai -m display --focus west
+#alt - g: yabai -m display --focus east
+
+# shortcuts for modifying the layout
+#ctrl + alt - up : yabai -m space --mirror x-axis
+#ctrl + alt - down : yabai -m space --mirror y-axis
+#ctrl + alt - right : yabai -m space --rotate 270
+#ctrl + alt - left : yabai -m space --rotate 90
+#ctrl + alt - a : yabai -m window --display west
+#ctrl + alt - d : yabai -m window --display east
+#ctrl + alt - t : yabai -m window --toggle float
+
+# modify the layout
+ctrl + alt - up : yabai -m space --mirror x-axis
+ctrl + alt - down : yabai -m space --mirror y-axis
+ctrl + alt - right : yabai -m space --rotate 270
+ctrl + alt - left : yabai -m space --rotate 90
+# move windows between displays
+ctrl + alt - a : yabai -m window --display west
+ctrl + alt - d : yabai -m window --display east
+# float a window or retile it
+ctrl + alt - t : yabai -m window --toggle float
+# swap windows around
+ctrl + alt - i : yabai -m window --swap north
+ctrl + alt - k : yabai -m window --swap south
+ctrl + alt - j : yabai -m window --swap west
+ctrl + alt - l : yabai -m window --swap east
+# resize windows
+ctrl + alt - p : yabai -m window --resize right:25:0
+ctrl + alt + shift - o : yabai -m window --resize right:-25:0
+ctrl + alt - o : yabai -m window --resize left:-25:0
+ctrl + alt + shift - p : yabai -m window --resize left:25:0
+ctrl + alt - 0x1E : yabai -m window --resize top:0:-25
+ctrl + alt + shift - 0x21 : yabai -m window --resize top:0:25
+ctrl + alt - 0x21 : yabai -m window --resize bottom:0:25
+ctrl + alt + shift - 0x1E : yabai -m window --resize bottom:0:-25
+# 0x1E is "]" and 0x21 is "["
+# move windows
+ctrl + alt + shift - up : yabai -m window --move rel:0:-50
+ctrl + alt + shift - down : yabai -m window --move rel:0:50
+ctrl + alt + shift - left : yabai -m window --move rel:-50:0
+ctrl + alt + shift - right : yabai -m window --move rel:50:0
+
+# move windows between spaces
+ctrl + alt + shift - l : yabai -m window --space next
+ctrl + alt + shift - j : yabai -m window --space prev
+
+# toggle focus follows mouse'
+ctrl + alt - f : [[ $(yabai -m config focus_follows_mouse) = "disabled" ]] && yabai -m config focus_follows_mouse autofocus mouse_follows_focus on || yabai -m config focus_follows_mouse off mouse_follows_focus off
+
+# fullscreen apps
+ctrl + alt - m : yabai -m config layout stack
+ctrl + alt + shift - m : yabai -m config layout bsp

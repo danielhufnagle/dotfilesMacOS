@@ -1,0 +1,50 @@
+#   __     __   _           _             #
+#   \ \   / /  | |         (_)            #
+#    \ \_/ /_ _| |__   __ _ _ _ __ ___    #
+#     \   / _` | '_ \ / _` | | '__/ __|   #
+#      | | (_| | |_) | (_| | | | | (__    #
+#      |_|\__,_|_.__/ \__,_|_|_|  \___|   #
+#                                         #
+
+# ----- LAYOUT ----- #
+yabai -m config layout bsp
+yabai -m config window_placement second_child
+
+# ----- PADDING AND GAPS ----- #
+yabai -m config top_padding 12
+yabai -m config bottom_padding 12
+yabai -m config left_padding 12
+yabai -m config right_padding 12
+yabai -m config window_gap 12
+
+# ----- MOUSE SUPPORT ----- #
+yabai -m config mouse_modifier ctrl
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+yabai -m config focus_follows_mouse autoraise
+# yabai -m config mouse_follows_focus on
+
+# ----- STATUS BAR ----- #
+# yabai -m config external_bar all:20:20 # enable if using status bar like sketchybarr
+
+# ----- WARP VISUAL INDICATOR ----- #
+yabai -m config insert_feedback_color 0x43ff6400
+
+# ----- IGNORE APPS ----- #
+yabai -m rule --add app="^System Settings$" manage=off
+#yabai -m rule --add app="^PlayCover$" manage=off
+yabai -m rule --add app="^Honkai: Star Rail$" manage=off
+yabai -m rule --add app="^Genshin Impact$" manage=off
+yabai -m rule --add app="^Yet Another Anime Game Launcher$" manage=off
+yabai -m rule --add app="^KakaoTalk$" manage=off
+yabai -m rule --add app="^Steam$" manage=off
+yabai -m rule --add app="^Steam Helper$" manage=off
+yabai -m rule --add app="^zoom.us$" manage=off
+yabai -m rule --add app="^Lumafly$" manage=off
+yabai -m rule --add app="^CrossOver$" manage=off
+yabai -m rule --add app="^Anaconda Navigator%" manage=off
+yabai -m rule --add app="^Minecraft Launcher$" manage=off
+yabai -m rule --add app="^CurseForge$" manage=off
+
+# to add an app to this list run
+# yabai -m query --windows to view all windows with the names that yabai recognizes
